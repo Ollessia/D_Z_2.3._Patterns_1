@@ -37,6 +37,10 @@ public class DataGenerator {
         String phone = faker.phoneNumber().phoneNumber();
         return phone;
     }
+    public static String generateWrongPhone(String locale) {
+        var faker = new Faker(new Locale(locale));
+        return faker.numerify("####");
+    }
 
     public static class Registration {
         private Registration() {
